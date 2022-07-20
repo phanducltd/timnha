@@ -1,11 +1,14 @@
 const axios = require('axios')
 
 const fs = require("fs");
+require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
-const token = '5468715488:AAGVuv2nEAVe6cXF02V2qfC5YqRPFQyZIpY';
+
+const token = process.env.TOKEN
 
 const bot = new TelegramBot(token, { polling: false });
-const MY_TIM_NHA_ID = '-711901782'
+
+const MY_TIM_NHA_ID = process.env.ID 
 
 
 let listQuan = [
@@ -65,6 +68,6 @@ const getAsyncList = async () => {
 
 var cron = require('node-cron');
 
-cron.schedule('*/15 * * * *', () => {
+cron.schedule('*/1 * * * *', () => {
     getAsyncList()
 });
