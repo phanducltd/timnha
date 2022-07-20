@@ -68,6 +68,6 @@ const getAsyncList = async () => {
 
 var cron = require('node-cron');
 
-cron.schedule('*/1 * * * *', () => {
+cron.schedule('*/30 * * * *', () => {
     getAsyncList()
 });
