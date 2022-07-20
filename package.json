@@ -1,0 +1,17 @@
+{
+  "name": "toolchotot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xuanduc",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "jsdom": "^20.0.0",
+    "node-cron": "^3.0.1",
+    "node-telegram-bot-api": "^0.58.0"
+  }
+}
